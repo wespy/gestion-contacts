@@ -13,7 +13,7 @@ if (!empty($_POST)) {
     // Check if POST variable "name" exists, if not default the value to blank, basically the same for all variables
     $nom = isset($_POST['Nom']) ? $_POST['Nom'] : '';
     $liste = isset($_POST['Liste']) ? $_POST['Liste'] : '';
-    $dateCrea = isset($_POST['DateCrea']) ? $_POST['DateCrea'] : date('Y-m-d H:i:s');
+    $dateCrea = isset($_POST['DateCrea']) ? $_POST['DateCrea'] : date('Y-m-d');
 
     // Insert new record into the contacts table
        

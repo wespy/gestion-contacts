@@ -20,9 +20,9 @@ function getMarche($id) {
 	
 	$query->execute();
 	$marche = $query->fetch();
-	$marchevaleur = $marche[0];
+	$lemarche = $marche[0];
 	
-	return $marchevaleur;
+	return $lemarche;
 }
 
 // Used to check update radio buttons according to the db value
