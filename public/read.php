@@ -1,3 +1,9 @@
+<!--
+Développé par Louis-Aymerick DREVON
+Durant un stage de 2 mois 14/02/2022 - 08/04/2022 
+-->
+
+
 <?php
 include 'functions.php';
 
@@ -79,10 +85,7 @@ if (!empty($_POST)) {
     $prescripteurs = $initialQuery->fetchAll(PDO::FETCH_ASSOC); 
     $buttonHidden = True;
 }
-
 ?>
-
-
 
 <?=template_header('Prescripteurs')?>
 
