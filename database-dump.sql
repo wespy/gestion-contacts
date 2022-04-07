@@ -50,7 +50,11 @@ CREATE TABLE `templates` (
   PRIMARY KEY (`IdTemplate`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1
 
-CREATE TABLE `Candidats` ()
+
+CREATE TABLE `Candidats` (
+  `IdCandidat` int(11) NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=6746 DEFAULT CHARSET=utf8
+
 
 INSERT INTO MARINE_NATIONALE.marche (IdMarche, Nom) VALUES(1, 'Marché des écoles');
 INSERT INTO MARINE_NATIONALE.marche (IdMarche, Nom) VALUES(2, 'Marché de l’emploi');
