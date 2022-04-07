@@ -59,6 +59,7 @@ if (!empty($_POST)) {
         }    
     }
 
+    // If a filter is applied
     $finalQuery = $pdo->prepare($initialQuery.$conditions."ORDER BY id LIMIT ".($page-1)*$records_per_page.", ".$records_per_page);
     $finalQuery->execute();
     $prescripteurs = $finalQuery->fetchAll(PDO::FETCH_ASSOC);
@@ -76,14 +77,15 @@ if (!empty($_POST)) {
             $implodedMails = $implodedMails.implode("",$mail).' ; ';
         }
     }
-    $buttonHidden = False;
+    
 
 }else{
 
+    // If no filter is applied
     $initialQuery = $pdo->prepare("SELECT * FROM prescripteurs ORDER BY id LIMIT ".($page-1)*$records_per_page.", ".$records_per_page);
     $initialQuery->execute();
     $prescripteurs = $initialQuery->fetchAll(PDO::FETCH_ASSOC); 
-    $buttonHidden = True;
+    
 }
 ?>
 
@@ -93,10 +95,12 @@ if (!empty($_POST)) {
 	<h2>Prescripteurs</h2>
 	<a href="create.php" class="create-contact">Créer un nouveau prescripteur</a>
     <a class="refresh-array" onClick="history.go(0)">Rafraîchir</a>
-    
+
+    <!-- Partie filtres -->
     <form method="post" action="read.php">
         <label for="id">Numéro :</label>  
         <input type="text" name="id">
+        </br>
         <label for="IdMarche">ID du marché :</label>  
         <select id="IdMarche" name = "IdMarche">
             <option selected disabled value="">Choisissez un marché</option>
@@ -105,36 +109,53 @@ if (!empty($_POST)) {
             <option value="3">Communication</option>
             <option value="4">Divers</option>
         </select>
+        </br>
         <label for="CIRFA">CIRFA Référent :</label>  
         <input type="text" name="CIRFA">
+        </br>
         <label for="Departement">Département :</label> 
         <input type="text" name="Departement">
+        </br>
         <label for="Nom">Nom de l'organisme :</label> 
         <input type="text" name="Nom">
+        </br>
         <label for="Organisme">Organisme :</label> 
         <input type="text" placeholder="" name="Organisme">
+        </br>
         <label for="Activite">Activité de l'organisme :</label> 
         <input type="text" name="Activite">
+        </br>
         <label for="Domaine">Domaine de l'organisme :</label> 
         <input type="text" name="Domaine">
+        </br>
         <label for="TypeScolarite">Type de scolarité :</label> 
         <input type="text" name="TypeScolarite">
+        </br>
         <label for="Adresse">Adresse physique :</label> 
         <input type="text" name="Adresse">
+        </br>
         <label for="Contact">Nom du contact :</label> 
         <input type="text" name="Contact">
+        </br>
         <label for="Role">Rôle du contact :</label> 
         <input type="text" name="Role">
+        </br>
+        <label for="Interet">Intérêt pour le prescripteur :</label> 
+        <input type="text" name="Interet">
+        </br>
         <button type="submit">Appliquer</button>
     </form>
 
     <form method='post' action='createlistFF.php'>
+    </br></br>
         <input type="text" name="implodedMails" id="implodedMails" value="<?=print($implodedMails);?>" hidden>
-        <button type='submit' hidden=<?=$buttonHidden?>>Créer une mailing list à partir du tri</button>
+        <button type='submit'>Créer une mailing list à partir du tri</button>
+    
     </form>    
 
 	<table>
         <thead>
+        </br>
             <tr>
                 <td align=center>Numéro</td>
                 <td align=center>CIRFA</td>
