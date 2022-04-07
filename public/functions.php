@@ -60,6 +60,9 @@ echo <<<EOT
     		<a href="read.php"><i class="fas fa-address-book"></i>Prescripteurs</a>
 			<a href="readlist.php"><i class="fas fa-mail-bulk"></i>Mailing lists</a>
 			<a href="readtemplate.php"><i class="fas fa-envelope-open-text"></i>Modèles d'e-mails</a>
+			<a href="template.php"><i class="fas fa-envelope-open-text"></i>Templates d'e-mails</a>
+			<a href="test.php"><i class="fas fa-file-upload"></i>Import de fichier Excel</a>
+			<a href="read_stat.php"><i class="fas fa-digital-tachograph"></i>Statistiques candidats</a>
 			
     	</div>
     </nav>
