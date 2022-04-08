@@ -57,7 +57,7 @@ echo <<<EOT
 	<body>
     <nav class="navtop">
     	<div>
-    		<h1>Prescripteurs CIRFA Lyon</h1>
+    		<h1>Contacts CIRFA Centre</h1>
             <a href="index.php"><i class="fas fa-home"></i>Accueil</a>
     		<a href="read.php"><i class="fas fa-address-book"></i>Prescripteurs</a>
 			<a href="readlist.php"><i class="fas fa-mail-bulk"></i>Mailing lists</a>
