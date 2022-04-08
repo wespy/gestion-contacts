@@ -8,7 +8,7 @@ template_header('Import de fichier excel');
 <!DOCTYPE html>
 
 <div class="content read">
-	<h2>Prescripteurs</h2>
+	<h2>Import de fichier excel</h2>
 
 <html>
 <head>

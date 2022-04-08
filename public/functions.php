@@ -5,6 +5,8 @@ Durant un stage de 2 mois 14/02/2022 - 08/04/2022
 
 
 <?php
+
+// Database connection
 function pdo_connect_mysql() {
     $DATABASE_HOST = '127.0.0.1';
     $DATABASE_USER = 'admindb_marine';
