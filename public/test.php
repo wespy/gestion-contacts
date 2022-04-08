@@ -23,8 +23,9 @@ template_header('Import de fichier excel');
 	<label for="excel">Choisir le fichier excel (.xlsx)</label>
     	<button>Choisir le fichier</button>
 		<input type="file" name="excel" />
-		<button type="submit" name="submit">Executer la requête</button>
+		
 	</div>
+	<button type="submit" name="submit">Executer la requête</button>
 </form>
 </div>
 <?php

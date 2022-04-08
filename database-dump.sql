@@ -52,8 +52,32 @@ CREATE TABLE `templates` (
 
 
 CREATE TABLE `Candidats` (
-  `IdCandidat` int(11) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=6746 DEFAULT CHARSET=utf8
+  `Civilite` varchar(50), 
+  `Nom` varchar(50), 
+  `Prenom` varchar(50), 
+  `Age` varchar(10), 
+  `CodePostal` varchar(20), 
+  `DateEntree` date, 
+  `DerniereDateModif` date,
+  `RecruteurAyantAjoute` varchar(200),
+  `Entite` varchar(300),
+  `TypeOrigine` varchar(200),
+  `Categorie` varchar(100),
+  `Origine` varchar(200),
+  `DernierNiveauEtude` varchar(300),
+  `SecteursActivitesSouhaites` varchar(300),
+  `PosteSouhaite` varchar(300),
+  `Experience` varchar(3),
+  `TypeContratSouhaite` varchar(300),
+  `SituationActuelle` varchar(200),
+  `AvancementRecherche` varchar(200),
+  `Tags` varchar(300),
+  `EtatAvancement` varchar(200),
+  `DateAnonymisee` varchar(20),
+  `NombreEmailsEnvoyes` varchar(3),
+  `NombreCommentairesSaisis` int, 
+  PRIMARY KEY (`Nom`, `Prenom`)
+  ) CHARACTER SET utf8;
 
 
 INSERT INTO MARINE_NATIONALE.marche (IdMarche, Nom) VALUES(1, 'Marché des écoles');

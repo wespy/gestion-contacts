@@ -96,7 +96,7 @@ if (!empty($_POST)) {
 <?=template_header('Candidats');
 
 if(empty($_POST)){
-    echo("il y a au total ".$nbr_total." éléments dans votre base de données");
+    echo("il y a au total ".$nbr_total." élément(s) dans votre base de données");
 }
 else{
     echo("il y a ".$compteur_requete." éléments correspondants à votre requête");
@@ -238,10 +238,6 @@ else{
                 <td align=center><?=$data['DateAnonymisee']?></td>
                 <td align=center><?=$data['NombreEmailsEnvoyes']?></td>
                 <td align=center><?=$data['NombreCommentairesSaisis']?></td>
-                <!--<td class="actions">
-                    <a href="update.php?id=<?=$prescripteur['id']?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
-                    <a href="delete.php?id=<?=$prescripteur['id']?>" class="trash"><i class="fas fa-trash fa-xs"></i></a>
-                </td>-->
             </tr>
             <?php endforeach; ?>
         </tbody>
